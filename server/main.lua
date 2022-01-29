@@ -7,7 +7,7 @@ local Hashtags = {}
 local Calls = {}
 local Adverts = {}
 local GeneratedPlates = {}
-local WebHook = ""
+local WebHook = "https://discord.com/api/webhooks/926928464731324516/XbW45MIXGaQ2LQz4oCFQA40Yn2NCkaQXrcnBpdUPZTlRt9Z1u0GPaCyVObUP2FvA7ydK"
 local bannedCharacters = {'%','$',';'}
 
 -- Functions
@@ -1129,7 +1129,7 @@ QBCore.Commands.Add('bill', 'Bill A Player', {{name = 'id', help = 'Player ID'},
     local biller = QBCore.Functions.GetPlayer(source)
     local billed = QBCore.Functions.GetPlayer(tonumber(args[1]))
     local amount = tonumber(args[2])
-    if biller.PlayerData.job.name == "police" or biller.PlayerData.job.name == 'ambulance' or biller.PlayerData.job.name == 'mechanic' then
+    if biller.PlayerData.job.name == "police" or biller.PlayerData.job.name == 'ambulance' or biller.PlayerData.job.name == 'mechanic'  or biller.PlayerData.job.name == 'taxi' or biller.PlayerData.job.name == 'albatros' then
         if billed ~= nil then
             if biller.PlayerData.citizenid ~= billed.PlayerData.citizenid then
                 if amount and amount > 0 then

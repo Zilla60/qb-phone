@@ -1,6 +1,7 @@
 Config = Config or {}
 Config.BillingCommissions = { -- This is a percentage (0.10) == 10%
-    mechanic = 0.10
+    mechanic = 0.10,
+    taxi = 0.10
 }
 Config.Linux = false -- True if linux
 Config.RepeatTimeout = 2000
@@ -93,16 +94,16 @@ Config.PhoneApplications = {
         slot = 8,
         Alerts = 0,
     },
-    ["crypto"] = {
-        app = "crypto",
-        color = "#004682",
-        icon = "fas fa-coins",
-        tooltipText = "Crypto",
-        job = false,
-        blockedjobs = {},
-        slot = 9,
-        Alerts = 0,
-    },
+    -- ["crypto"] = {
+    --     app = "crypto",
+    --     color = "#004682",
+    --     icon = "fas fa-coins",
+    --     tooltipText = "Crypto",
+    --     job = false,
+    --     blockedjobs = {},
+    --     slot = 9,
+    --     Alerts = 0,
+    -- },
     ["racing"] = {
         app = "racing",
         color = "#353b48",
